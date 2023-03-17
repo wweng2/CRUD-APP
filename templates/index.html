@@ -1,0 +1,17 @@
+{% extends 'foundation.html' %}
+
+{% block content %}
+    <h1><center>User Display</h1></center>
+
+  <!--Ths does a for loop and diply a three colmnus, name,id and points for each user in the database-->
+    <h2>{% block title %} Users {% endblock %}</h2>
+    {% for user in users %}
+        <div class='user text-dark bg-secondary'>
+            <h3>Name: {{ user['user_name'] }}</h3>
+            <p> ID: {{ user['id'] }}</p>
+            <p> Points: {{ user['points'] }}</p>
+          <a href="{{ url_for('edit', id=user['id']) }}">Edit</a>
+
+        </div>
+    {% endfor %}
+{% endblock %}
