@@ -1,5 +1,6 @@
 import sqlite3
-# makes the table of users with user_name,id,points and inser the beginner # users 
+# Run this first to make the database and table in it or else it will not run makes the table of users with user_name,id,points and inser the beginner
+# users 
 connection = sqlite3.connect('user_database.db')
 
 
