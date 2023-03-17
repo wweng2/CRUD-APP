@@ -1,0 +1,36 @@
+{% extends 'foundation.html' %}
+
+<!--Makes a input form for the user to make a new user-->
+{% block content %}
+    <h1>{% block title %}<center> Add a New User </center> {% endblock %}</h1>
+    <div class="bg-info">
+    <form method="post">
+      <center>
+        <label for="user_name">User Name</label>
+        <br>
+        <input type="text" name="user_name"
+               placeholder="User Name"
+               value="{{ request.form['user_name'] }}"></input>
+        <br>
+
+        <label for="id">User Id</label>
+        <br>
+        <textarea name="id"
+                  placeholder="User Id"
+                  >{{ request.form['id'] }}</textarea>
+        <br>
+
+        <label for="points">User Points</label>
+        <br>
+        <textarea name="points"
+                    placeholder="User points"
+                  >{{ request.form['points'] }}</textarea>
+        <br>
+        <button type="submit">Submit</button>
+        </center>
+    </form>
+  
+  
+  
+    </div>
+{% endblock %}
