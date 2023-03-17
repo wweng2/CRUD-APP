@@ -1,0 +1,38 @@
+{% extends 'foundation.html' %}
+
+{% block content %}
+  <center>
+<div class="bg-info">
+<form action="/search" method="POST" >
+ 
+        <!-- Search form that allow for the name to be input to search for the user  -->
+
+    <form method="post">
+        <label for="user_name">User Name</label>
+        <br>
+        <input type="text" name="user_name"
+               placeholder="User Name"
+               value="{{ request.form['user_name'] }}"></input>
+        <br>
+            <button type="submit" class="btn btn-secondary text-light">Search
+            </button>
+    
+   
+</form>
+</center>
+    <center>
+              <!-- Display the user info that is found by using a for loop to dispaly all the infomation for each user found  -->
+    {% for user in users %}
+        <div class='user bg-info' >
+            <h3> Name: {{ user['user_name'] }}</h3>
+            <p> ID: {{ user['id'] }}</p>
+            <p> Points: {{ user['points'] }}</p>
+
+
+        </div>
+    {% endfor %}
+      </center>
+
+</div>
+</div>
+{% endblock %}
