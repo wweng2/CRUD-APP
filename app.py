@@ -124,4 +124,4 @@ def search():
 
 
 if __name__ == '__main__':
-  app.run(host='0.0.0.0') # run the app and should work
+  app.run(host='0.0.0.0') # run the app and should work as the host ip will allow for anyone to assess it .
